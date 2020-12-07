@@ -19,6 +19,7 @@ public class VisitSDJpaService implements VisitService {
     public Set<Visit> findAll() {
         Set<Visit> visits = new HashSet<>();
         visitRepository.findAll().forEach(visits::add);
+        //visits.clear();
         return visits;
     }
 
