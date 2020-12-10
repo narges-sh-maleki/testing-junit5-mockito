@@ -28,7 +28,7 @@ public class VisitController {
     public Visit loadPetWithVisit(Long petId, Map<String, Object> model) {
         Pet pet = petService.findById(petId);
         model.put("pet", pet);
-        Visit visit = new Visit();
+        Visit visit = new Visit(1l);
         pet.getVisits().add(visit);
         visit.setPet(pet);
         return visit;
